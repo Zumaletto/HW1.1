@@ -37,4 +37,15 @@ public class CashbackHackerTest {
         //при проверке на граничные значения не проходит. неверно описана логика
     }
 
+    @org.testng.annotations.Test
+    public void shouldGetAmountEquallyNull(){
+        int amount = 0;
+
+        int actual = service.remain(amount);
+        int expected = 1000;
+
+        assertEquals(actual, expected);
+
+    }
+
 }
